@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{091BB02F-2BAA-4DFF-AB5B-A894CE81604B}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{6143fdea-f3c2-4a09-aafa-6e230626515e}</TemplateGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>PerboyreApp.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>PerboyreApp.iOS</AssemblyName>
+    <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <ProvisioningType>automatic</ProvisioningType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>Apple Distribution: Perboyre Castelo (36V76X3N9M)</CodesignKey>
+    <CodesignProvision>perboyreappprofile</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <CodesignKey>Apple Distribution: Perboyre Castelo (36V76X3N9M)</CodesignKey>
+    <CodesignProvision>perboyreappprofile</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>Apple Development: Perboyre Castelo (6838288AZ8)</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>None</MtouchLink>
+    <MtouchInterpreter>-all</MtouchInterpreter>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>Apple Distribution: Perboyre Castelo (36V76X3N9M)</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignProvision>perboyreappprofile</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+    <AppExtensionDebugBundleId />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <None Include="Entitlements.plist" />
+    <None Include="Info.plist" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="renderers\CustomTabbedPageRenderer.cs" />
+    <Compile Include="renderers\SearchViewRenderer.cs" />
+    <Compile Include="renderers\SearchPageRenderer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-60x60%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-60x60%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20%401x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20%402x-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%401x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%402x-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%401x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%402x-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-76x76%401x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-76x76%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-83.5x83.5%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ItunesArtwork%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Prism.DryIoc.Forms">
+      <Version>7.2.0.1422</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1560" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+    <PackageReference Include="Plugin.Permissions">
+      <Version>6.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Forms">
+      <Version>2.4.3.840</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Transformations">
+      <Version>2.4.3.840</Version>
+    </PackageReference>
+    <PackageReference Include="Rg.Plugins.Popup">
+      <Version>2.0.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="Prism.Plugin.Popups">
+      <Version>7.2.0.1046</Version>
+    </PackageReference>
+    <PackageReference Include="PhotoBrowser.Forms">
+      <Version>0.1.4</Version>
+    </PackageReference>
+    <PackageReference Include="Acr.UserDialogs">
+      <Version>7.1.0.442</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugin.Media">
+      <Version>5.0.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\PerboyreApp\PerboyreApp.csproj">
+      <Project>{C85E252E-E416-4DB6-81CB-F4615B65C408}</Project>
+      <Name>PerboyreApp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Dentistas.png" />
+    <BundleResource Include="Resources\unnamed.png" />
+    <BundleResource Include="Resources\logo02.png" />
+    <BundleResource Include="Resources\Email36.png" />
+    <BundleResource Include="Resources\password36.png" />
+    <BundleResource Include="Resources\Dentistas_collection.png" />
+    <BundleResource Include="Resources\Dentistas_colection%402x.png" />
+    <BundleResource Include="Resources\Dentistas_colection%403x.png" />
+    <BundleResource Include="Resources\Dentistas%402x.png" />
+    <BundleResource Include="Resources\Dentistas%403x.png" />
+    <BundleResource Include="Resources\home_selected.png" />
+    <BundleResource Include="Resources\home_selected%402x.png" />
+    <BundleResource Include="Resources\home_selected%403x.png" />
+    <BundleResource Include="Resources\cancelwhite.png" />
+    <BundleResource Include="Resources\library_arrow.png" />
+    <BundleResource Include="Resources\library_arrow%402x.png" />
+    <BundleResource Include="Resources\library_arrow%403x.png" />
+    <BundleResource Include="Resources\back.png" />
+    <BundleResource Include="Resources\back%402x.png" />
+    <BundleResource Include="Resources\back%403x.png" />
+    <BundleResource Include="Resources\backwhite.png" />
+    <BundleResource Include="Resources\backwhite%402x.png" />
+    <BundleResource Include="Resources\backwhite%403x.png" />
+    <BundleResource Include="Resources\exames.png">
+      <Optimize>true</Optimize>
+    </BundleResource>
+    <BundleResource Include="Resources\exames%402x.png">
+      <Optimize>true</Optimize>
+    </BundleResource>
+    <BundleResource Include="Resources\exames%403x.png">
+      <Optimize>true</Optimize>
+    </BundleResource>
+    <BundleResource Include="Resources\sorriso.png" />
+    <BundleResource Include="Resources\share%401x.png" />
+    <BundleResource Include="Resources\share%402x.png" />
+    <BundleResource Include="Resources\zoom%401x.png" />
+    <BundleResource Include="Resources\zoom%402x.png" />
+    <BundleResource Include="Resources\Spinner.gif" />
+    <BundleResource Include="Resources\exames2.png" />
+    <BundleResource Include="Resources\exames2%402x.png" />
+    <BundleResource Include="Resources\exames2%403x.png" />
+    <BundleResource Include="Resources\share%403x.png" />
+    <BundleResource Include="Resources\zoom%403x.png" />
+    <BundleResource Include="Resources\pdf.png" />
+    <BundleResource Include="Resources\pdf%402x.png" />
+    <BundleResource Include="Resources\pdf%403x.png" />
+    <BundleResource Include="Resources\perfil.png" />
+    <BundleResource Include="Resources\perfil%402x.png" />
+    <BundleResource Include="Resources\perfil%403x.png" />
+    <BundleResource Include="Resources\requisicao.png" />
+    <BundleResource Include="Resources\requisicao%402x.png" />
+    <BundleResource Include="Resources\requisicao%403x.png" />
+    <BundleResource Include="Resources\unidades.png" />
+    <BundleResource Include="Resources\unidades%402x.png" />
+    <BundleResource Include="Resources\unidades%403x.png" />
+    <BundleResource Include="Resources\home%403x.png" />
+    <BundleResource Include="Resources\home%402x.png" />
+    <BundleResource Include="Resources\home.png">
+      <Optimize>true</Optimize>
+    </BundleResource>
+    <BundleResource Include="Resources\perfil_selected.png" />
+    <BundleResource Include="Resources\perfil_selected%402x.png" />
+    <BundleResource Include="Resources\perfil_selected%403x.png" />
+    <BundleResource Include="Resources\requisicao_selected.png" />
+    <BundleResource Include="Resources\requisicao_selected%402x.png" />
+    <BundleResource Include="Resources\requisicao_selected%403x.png" />
+    <BundleResource Include="Resources\unidades_selected.png" />
+    <BundleResource Include="Resources\unidades_selected%402x.png" />
+    <BundleResource Include="Resources\unidades_selected%403x.png" />
+    <BundleResource Include="Resources\exames_selected.png" />
+    <BundleResource Include="Resources\exames_selected%402x.png" />
+    <BundleResource Include="Resources\exames_selected%403x.png" />
+    <BundleResource Include="Resources\pdf_selected.png" />
+    <BundleResource Include="Resources\pdf_selected%402x.png" />
+    <BundleResource Include="Resources\pdf_selected%403x.png" />
+    <BundleResource Include="Resources\splash.png" />
+    <BundleResource Include="Resources\splash%402x.png" />
+    <BundleResource Include="Resources\splash%403x.png" />
+    <BundleResource Include="Resources\whatsapp.png" />
+    <BundleResource Include="Resources\whatsapp%402x.png" />
+    <BundleResource Include="Resources\whatsapp%403x.png" />
+    <BundleResource Include="Resources\foto.png" />
+    <BundleResource Include="Resources\foto%402x.png" />
+    <BundleResource Include="Resources\foto%403x.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ITunesArtwork Include="iTunesArtwork" />
+    <ITunesArtwork Include="iTunesArtwork%402x" />
+  </ItemGroup>
+</Project>
